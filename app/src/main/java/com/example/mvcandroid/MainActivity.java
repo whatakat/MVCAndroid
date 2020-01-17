@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Observable;
 import java.util.Observer;
 
 public class MainActivity extends AppCompatActivity implements Observer, View.OnClickListener {
@@ -28,4 +29,25 @@ public class MainActivity extends AppCompatActivity implements Observer, View.On
         mModel.addObserver(this);
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btnCounter1:
+                mModel.setElementValueAtIndex(0);
+                break;
+            case R.id.btnCounter2:
+                mModel.setElementValueAtIndex(1);
+                break;
+            case R.id.btnCounter3:
+                mModel.setElementValueAtIndex(2);
+                break;
+        }
+    }
+
+    @Override
+    public void update(Observable o, Object arg) {
+        btnCounter1.setText("Amount = "+mModel.getElementValueAtIndex(0));
+        btnCounter2.setText("Amount = "+mModel.getElementValueAtIndex(1));
+        btnCounter3.setText("Amount = "+mModel.getElementValueAtIndex(2));
+    }
 }
