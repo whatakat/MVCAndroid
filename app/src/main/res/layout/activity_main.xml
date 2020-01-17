@@ -5,5 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="count1"/>
+    <Button
+        android:id="@+id/btnCounter1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amount = 0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="count2"/>
+    <Button
+        android:id="@+id/btnCounter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amount = 0"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="count3"/>
+    <Button
+        android:id="@+id/btnCounter3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amount = 0"/>
     </LinearLayout>
